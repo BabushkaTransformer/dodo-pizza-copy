@@ -1,0 +1,221 @@
+.toast {
+    > div {
+        background-color: #000;
+        opacity: 0.75;
+        color: #fff;
+        border-radius: 10px;
+    }
+}
+
+.header {
+    position: relative;
+    z-index: 15;
+}
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+//top
+.top {
+    display: flex;
+    padding: 25px 0 5px 0;
+}
+
+.active {
+    li {
+        color: rgb(255, 105, 0) !important;
+    }
+}
+
+.logo {
+    margin-top: -5px;
+    cursor: pointer;
+
+    img {
+        width: 250px;
+    }
+}
+
+.delivery {
+    padding-left: 40px;
+
+    p {
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    > div {
+        display: flex;
+    }
+
+    span {
+        margin-right: 10px;
+        position: relative;
+        margin-top: 1px;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 2;
+    }
+}
+
+.contact {
+    padding-left: 40px;
+
+    > div {
+        display: flex;
+        margin-top: 4px;
+        color: rgb(153, 153, 153);
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 500;
+
+        img {
+            width: 22px;
+            height: 18px;
+            font-size: 0;
+            line-height: 0;
+            margin-left: 5px;
+        }
+    }
+
+    span {
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+}
+
+.signIn {
+    max-width: 100px;
+    margin: 0 0 8px auto;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 100px;
+    background-color: rgb(243, 243, 247);
+    color: rgb(92, 99, 112);
+    height: 32px;
+    padding: 8px 16px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+//Bottom
+.bottom {
+    z-index: 100;
+    background-color: #fff;
+}
+
+.bottomScrolled {
+    position: sticky;
+    margin: 0 auto;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 4px 30px rgba(6, 5, 50, 0.1);
+
+    .hiddenLogo img {
+        transform: translateX(0);
+    }
+
+    .menu {
+        transform: translateX(0);
+    }
+}
+
+.bottomInner {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.overflow {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hiddenLogo {
+    display: block;
+    width: 52px;
+
+    img {
+        width: 52px;
+        transform: translateX(-52px);
+        transition: transform 0.25s ease 0s;
+    }
+}
+
+.menu {
+    white-space: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateX(-52px);
+    transition: transform 0.25s ease 0s;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        font-weight: 500;
+        padding: 22px 0;
+        color: black;
+        font-size: 14px;
+        line-height: 1;
+        transition: color 0.25s ease 0s, padding 0.25s ease 0s;
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(255, 105, 0);
+        }
+    }
+}
+
+.cart {
+    position: relative;
+    margin-left: auto;
+    z-index: 200;
+
+    > button {
+        height: 40px;
+        padding: 8px 20px;
+        font-size: 16px;
+        line-height: 24px;
+        background-color: rgb(255, 105, 0);
+        color: rgb(255, 255, 255);
+        min-width: 90px;
+        display: flex;
+        outline: none;
+        border: none;
+        border-radius: 9999px;
+        text-align: center;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        user-select: none;
+        transition-property: background-color, color;
+        transition-duration: 200ms;
+        transition-timing-function: ease-out;
+    }
+}
+
+.verticalLine {
+    height: 24px;
+    width: 1px;
+    margin: 0 12px;
+    background: rgb(255, 255, 255);
+    opacity: 0.4;
+}

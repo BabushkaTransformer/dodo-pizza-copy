@@ -1,0 +1,51 @@
+.slider {
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+
+
+.slick-next {
+    right: 0 !important;
+    z-index: 1;
+    &:before {
+        color: red !important;
+    }
+}
+
+.slick-prev {
+    left: 0 !important;
+    z-index: 1;
+    &:before {
+        color: red !important;
+    }
+}
+
+.slick-slide {
+    padding: 0 10px;
+}
+
+.slide {
+    width: 1024px;
+    height: auto;
+    position: relative;
+    opacity: 0.4;
+    image-rendering: auto;
+    margin-right: 24px;
+    flex: 0 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: opacity 450ms ease-out 0s, box-shadow, transform;
+    img {
+        width: 100%;
+    }
+}
+
+.slick-center {
+    .slide {
+        opacity: 1 !important;
+    }
+}
+

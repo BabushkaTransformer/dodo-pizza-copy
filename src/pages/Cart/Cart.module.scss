@@ -1,0 +1,190 @@
+
+.header {
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 22px;
+}
+
+.logo {
+    width: 255px;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+    }
+}
+
+.steps {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.step {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 164px;
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    &:last-child {
+        &:before {
+            content: none;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 16px;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(175, 175, 175);
+        background-image: repeating-linear-gradient(
+                        90deg, rgb(175, 175, 175), rgb(175, 175, 175) 2px, rgb(255, 255, 255) 3px, rgb(255, 255, 255) 8px);
+    }
+}
+
+.stepNum {
+    position: relative;
+    display: inline-block;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(216, 216, 216);
+    box-shadow: 0 0 0 4px rgb(255, 255, 255);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 50%;
+}
+
+.stepText {
+    display: block;
+    max-width: 140px;
+    margin: 4px auto 0;
+    color: rgb(175, 175, 175);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    white-space: normal;
+}
+
+
+//cart
+
+.cart {
+
+}
+
+.cartInner {
+    width: 100%;
+    max-width: 614px;
+    margin: 0 auto;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 35px;
+    color: rgb(0, 0, 0);
+    margin: 48px 0px;
+}
+
+.emptyCart {
+    margin-bottom: 150px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: rgb(0, 0, 0);
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 48px;
+    margin-bottom: 36px;
+    font-size: 21px;
+    font-weight: 700;
+
+    span {
+        margin-left: 10px;
+        font-size: 26px;
+        color: rgb(255, 105, 0);
+    }
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 128px;
+}
+
+.goBack {
+    outline: none;
+    border: none;
+    border-radius: 9999px;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    background-color: rgb(243, 243, 247);
+    color: rgb(92, 99, 112);
+    height: 48px;
+    padding: 12px 48px 12px 54px;
+    font-size: 16px;
+    line-height: 24px;
+
+    svg {
+        position: absolute;
+        top: calc(50% - 13px);
+        height: 24px;
+        left: 8px;
+        transform: rotate( 180deg);
+    }
+}
+
+
+.goNext {
+    outline: none;
+    border: none;
+    border-radius: 9999px;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    background-color: rgb(255, 105, 0);
+    color: rgb(255, 255, 255);
+    height: 48px;
+    padding: 12px 54px 12px 48px;
+    font-size: 16px;
+    line-height: 24px;
+}

@@ -1,0 +1,246 @@
+//productModal^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 150ms ease;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.modal {
+    display: flex;
+    position: relative;
+    width: 924px;
+    transform: scale(0.96);
+    transition: 150ms ease 0s;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    transition: 150ms all;
+}
+
+.close {
+    position: absolute;
+    top: 13px;
+    right: -38px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out 0s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.left {
+    position: relative;
+    width: 530px;
+    height: 610px;
+    background: rgb(255, 255, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+
+    img {
+        width: 100%;
+        height: auto;
+        transform: scale(0.7);
+        transition: 0.3s ease;
+    }
+}
+
+.right {
+    position: relative;
+    width: 394px;
+    height: 610px;
+    background: rgb(252, 252, 252);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.description {
+    h2 {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 500;
+    }
+}
+
+.sizes {
+    border-radius: 9999px;
+    background-color: rgb(243, 243, 247);
+    height: 32px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin: 8px 0;
+
+    label {
+        display: block;
+        flex: 1 1 0;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 9999px;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        line-height: 32px;
+        font-family: Dodo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: normal;
+        text-align: center;
+        height: 32px;
+        transition: color 150ms ease 0s;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.disabled {
+    color: rgb(171, 173, 186) !important;
+}
+
+.currentSize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(33.3333%);
+    transition: transform 200ms ease-out 0s, width;
+    padding: 2px;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9999px;
+        box-shadow: 0 6px 20px rgba(6, 5, 50, 0.19);
+    }
+}
+
+.currentType {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(50%);
+    transition: transform 200ms ease-out 0s, width;
+    padding: 2px;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9999px;
+        box-shadow: 0 6px 20px rgba(6, 5, 50, 0.19);
+    }
+}
+
+.text {
+    margin-top: 32px;
+}
+
+.button {
+    height: 48px;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: rgb(255, 105, 0);
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    border-radius: 9999px;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+//productModal^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+//cartModal^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.cartModal {
+    position: absolute;
+    top: calc(100% + 20px);
+    right: 0;
+    padding: 32px 25px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    visibility: hidden;
+    transition: 0.5s ease 0s;
+    width: 352px;
+    font-weight: 500;
+    z-index: 102;
+}
+
+.active {
+    visibility: visible;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+}
+
+.top {
+    max-height: 250px;
+    overflow-y: scroll;
+    padding: 0 10px;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 20px;
+        background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: silver;
+        border-radius: 20px;
+        box-shadow: inset 1px 1px 10px #f3faf7;
+    }
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}

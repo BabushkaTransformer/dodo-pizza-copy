@@ -1,0 +1,186 @@
+//productModal^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 150ms ease;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.modal {
+    display: flex;
+    position: relative;
+    width: 924px;
+    transform: scale(0.96);
+    transition: 150ms ease 0s;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    transition: 150ms all;
+}
+
+.close {
+    position: absolute;
+    top: 13px;
+    right: -38px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out 0s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+//auth^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.signIn {
+    display: flex;
+    flex-direction: column;
+    width: 409px;
+    height: 399px;
+    padding: 32px;
+    background-color: rgb(243, 243, 247);
+    border-radius: 20px;
+    position: relative;
+
+    h2 {
+        margin: 0 0 8px;
+        color: rgb(0, 0, 0);
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+
+    p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(92, 99, 112);
+        margin: 0 0 24px;
+    }
+
+    span {
+        white-space: nowrap;
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    b {
+        font-size: 16px;
+        margin-left: 8px;
+        color: rgb(255, 105, 0);
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        background-color: rgb(226, 226, 233);
+        color: rgb(171, 173, 186);
+        height: 48px;
+        padding: 12px 24px;
+        font-size: 16px;
+        line-height: 24px;
+        outline: none;
+        border: none;
+        border-radius: 9999px;
+        text-align: center;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        user-select: none;
+        transition-property: background-color, color;
+        transition-duration: 200ms;
+        transition-timing-function: ease-out;
+    }
+}
+
+.signIn_input {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+
+    label {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    input {
+        height: 56px;
+        padding: 16px;
+        border-radius: 12px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        outline: none;
+        box-shadow: none;
+        appearance: none;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        border: 1px solid rgb(226, 226, 233);
+        resize: none;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        font-variant-ligatures: no-common-ligatures;
+        transition-property: background-color, border-color;
+        transition-duration: 100ms;
+        transition-timing-function: ease-out;
+    }
+}
+
+.confirm_input {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+    margin-top: 24px;
+
+    input {
+        width: 52px;
+        height: 60px;
+        background-color: rgb(255, 255, 255);
+        outline: none;
+        border: 1px solid rgb(211, 213, 222);
+        border-radius: 12px;
+        color: rgb(0, 0, 0);
+        font-size: 36px;
+        line-height: 36px;
+        text-align: center;
+        font-weight: 600;
+        padding: 0px;
+        margin-right: 12px;
+    }
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

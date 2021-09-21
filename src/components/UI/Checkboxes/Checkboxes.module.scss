@@ -1,0 +1,75 @@
+
+.sizes {
+    border-radius: 9999px;
+    background-color: rgb(243, 243, 247);
+    height: 32px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin: 8px 0;
+
+    label {
+        display: block;
+        flex: 1 1 0;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 9999px;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        line-height: 32px;
+        font-family: Dodo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: normal;
+        text-align: center;
+        height: 32px;
+        transition: color 150ms ease 0s;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.disabled {
+    color: rgb(171, 173, 186) !important;
+}
+
+.currentSize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(33.3333%);
+    transition: transform 200ms ease-out 0s, width;
+    padding: 2px;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9999px;
+        box-shadow: 0 6px 20px rgba(6, 5, 50, 0.19);
+    }
+}
+
+.currentType {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(50%);
+    transition: transform 200ms ease-out 0s, width;
+    padding: 2px;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9999px;
+        box-shadow: 0 6px 20px rgba(6, 5, 50, 0.19);
+    }
+}

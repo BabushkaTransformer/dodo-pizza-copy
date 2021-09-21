@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    max-width: 1054px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 37px;
+    color: rgb(0, 0, 0);
+    margin: 32px 0;
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 - 16px;
+}
